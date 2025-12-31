@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Ball Blast</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+        <div id="ui">
+            <div id="score">0</div>
+            <div id="level">Level 1</div>
+        </div>
+        <div id="start-screen">
+            <h1>BALL BLAST</h1>
+            <p>Drag to move cannon</p>
+            <p>Destroy all blocks!</p>
+            <button id="startBtn">PLAY</button>
+            <p id="highScore">Best: 0</p>
+        </div>
+        <div id="game-over">
+            <h2>GAME OVER</h2>
+            <p>Score: <span id="finalScore">0</span></p>
+            <p>Best: <span id="bestScore">0</span></p>
+            <button id="restartBtn">PLAY AGAIN</button>
+        </div>
+    </div>
+    <script src="js/game.js"></script>
+</body>
+</html>
