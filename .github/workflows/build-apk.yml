@@ -41,6 +41,8 @@ jobs:
     - name: Update Android SDK version
       run: |
         sed -i 's/minSdkVersion = .*/minSdkVersion = 23/' android/variables.gradle
+        sed -i 's/compileSdkVersion = .*/compileSdkVersion = 34/' android/variables.gradle
+        sed -i 's/targetSdkVersion = .*/targetSdkVersion = 34/' android/variables.gradle
 
     - name: Build Release APK
       working-directory: android
