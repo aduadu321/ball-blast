@@ -511,6 +511,7 @@ class BallBlast {
 
     gameOver() {
         this.gameState = 'gameover';
+        this.totalGames++;
 
         if (this.score > this.highScore) {
             this.highScore = this.score;
@@ -527,6 +528,11 @@ class BallBlast {
         document.getElementById('bestScore').textContent = this.highScore;
         document.getElementById('session-coins').textContent = `+${this.sessionCoins} coins`;
         document.getElementById('game-over').classList.remove('hidden');
+
+        // Show interstitial ad every 3 games
+        if (this.totalGames % 3 === 0 && window.AdManager) {
+            window.AdManager.showInterstitial();
+        }
     }
 
     checkAchievements() {
