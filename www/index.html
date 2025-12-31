@@ -14,17 +14,28 @@
             <div id="level">Level 1</div>
         </div>
         <div id="start-screen">
+            <div class="coins-header"><span id="coins-display">0</span> coins</div>
             <h1>BALL BLAST</h1>
             <p>Drag to move cannon</p>
             <p>Destroy all blocks!</p>
             <button id="startBtn">PLAY</button>
+            <button id="shopBtn" class="btn-shop">UPGRADES</button>
             <p id="highScore">Best: 0</p>
         </div>
         <div id="game-over">
             <h2>GAME OVER</h2>
             <p>Score: <span id="finalScore">0</span></p>
             <p>Best: <span id="bestScore">0</span></p>
+            <p class="session-coins" id="session-coins">+0 coins</p>
             <button id="restartBtn">PLAY AGAIN</button>
+        </div>
+        <div id="shop-screen" class="hidden">
+            <div class="shop-header">
+                <h2>UPGRADES</h2>
+                <button id="closeShop" class="btn-close">X</button>
+            </div>
+            <div class="shop-coins">Coins: <span id="shop-coins-display">0</span></div>
+            <div id="shop-items" class="shop-container"></div>
         </div>
     </div>
     <script src="js/game.js"></script>
