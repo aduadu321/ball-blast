@@ -24,10 +24,13 @@ jobs:
       uses: actions/setup-java@v4
       with:
         distribution: 'temurin'
-        java-version: '17'
+        java-version: '21'
 
     - name: Setup Android SDK
       uses: android-actions/setup-android@v3
+
+    - name: Install Android SDK 35
+      run: sdkmanager "platforms;android-35" "build-tools;35.0.0"
 
     - name: Install dependencies
       run: npm install
@@ -43,8 +46,8 @@ jobs:
         sed -i 's/minSdkVersion = .*/minSdkVersion = 23/' android/variables.gradle
         sed -i 's/compileSdkVersion = .*/compileSdkVersion = 35/' android/variables.gradle
         sed -i 's/targetSdkVersion = .*/targetSdkVersion = 35/' android/variables.gradle
-        sed -i "s/id(\"com.android.application\") version .*/id(\"com.android.application\") version \"8.5.0\" apply false/" android/build.gradle
-        sed -i "s/id 'com.android.application' version .*/id 'com.android.application' version '8.5.0' apply false/" android/build.gradle
+        sed -i "s/id(\"com.android.application\") version .*/id(\"com.android.application\") version \"8.7.0\" apply false/" android/build.gradle
+        sed -i "s/id 'com.android.application' version .*/id 'com.android.application' version '8.7.0' apply false/" android/build.gradle
         sed -i 's/compileSdk = .*/compileSdk = 35/' android/app/build.gradle
         sed -i 's/targetSdk = .*/targetSdk = 35/' android/app/build.gradle
 
