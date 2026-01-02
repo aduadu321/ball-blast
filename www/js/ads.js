@@ -8,10 +8,11 @@ class AdManager {
         this.gamesPlayed = 0;
         this.gamesUntilAd = 3;
 
-        // Test IDs - Replace with your real IDs before publishing
+        // TODO: Replace with real Ball Blast ad unit IDs from AdMob
+        // Publisher ID: ca-app-pub-2765135233673065
         this.config = {
-            interstitialId: 'ca-app-pub-3940256099942544/1033173712',
-            rewardedId: 'ca-app-pub-3940256099942544/5224354917',
+            interstitialId: 'ca-app-pub-3940256099942544/1033173712', // TEST - replace
+            rewardedId: 'ca-app-pub-3940256099942544/5224354917', // TEST - replace
             bannerId: 'ca-app-pub-3940256099942544/6300978111'
         };
 
