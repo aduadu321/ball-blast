@@ -8,12 +8,12 @@ class AdManager {
         this.gamesPlayed = 0;
         this.gamesUntilAd = 3;
 
-        // TODO: Replace with real Ball Blast ad unit IDs from AdMob
-        // Publisher ID: ca-app-pub-2765135233673065
+        // REAL Ball Blast ad unit IDs from AdMob
+        // App ID: ca-app-pub-2765135233673065~4123152147
         this.config = {
-            interstitialId: 'ca-app-pub-3940256099942544/1033173712', // TEST - replace
-            rewardedId: 'ca-app-pub-3940256099942544/5224354917', // TEST - replace
-            bannerId: 'ca-app-pub-3940256099942544/6300978111'
+            interstitialId: 'ca-app-pub-2765135233673065/3740008763',
+            rewardedId: 'ca-app-pub-2765135233673065/1113845422',
+            bannerId: 'ca-app-pub-3940256099942544/6300978111' // Test banner
         };
 
         this.init();
@@ -34,7 +34,7 @@ class AdManager {
 
             await AdMob.initialize({
                 requestTrackingAuthorization: true,
-                initializeForTesting: true
+                initializeForTesting: false
             });
 
             this.AdMob = AdMob;
